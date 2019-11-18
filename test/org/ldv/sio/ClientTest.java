@@ -30,53 +30,48 @@ public class ClientTest {
   @Test
   public void getNom() {
 
-    //assertEquals("Dijkstra", this.c.getNom());
-    this.c.getNom().equals("Dijkstra");
+    assertEquals("Dijkstra", this.c.getNom());
+
   }
 
   @Test
   public void setNom() {
     this.c.setNom(this.c.getNom().toUpperCase());
-    //assertEquals("DIJKSTRA", this.c.getNom());
-    this.c.getNom().equals("DIJKSTRA");
+    assertEquals("DIJKSTRA", this.c.getNom());
+
   }
 
   @Test
   public void getPrenom() {
-    //assertEquals("Edsger", this.c.getPrenom());
-    this.c.getPrenom().equals("Edsger");
+    assertEquals("Edsger", this.c.getPrenom());
   }
 
   @Test
   public void setPrenom() {
     this.c.setPrenom(this.c.getPrenom().toUpperCase());
-    //assertEquals("EDSGER", this.c.getPrenom());
-    this.c.getPrenom().equals("EDSGER");
+    assertEquals("EDSGER", this.c.getPrenom());
 
   }
 
   @Test
   public void verifDomicileEgalLivraison (){
-   // assertEquals(d, this.c.getLivraison());
-    this.c.getLivraison(0).equals(d);
+    assertEquals(d, this.c.getLivraison(0));
   }
 
   @Test
   public void verifDomicileDiffLivraison(){
-    //assertEquals(d, this.c1.getDomicile());
-    //assertEquals(l, this.c1.getLivraison());
-    this.c1.getDomicile().equals(d);
-    this.c1.getLivraison(0).equals(l);
+    assertEquals(d, this.c1.getDomicile());
+    assertEquals(l, this.c1.getLivraison(0));
   }
 
   @Test
   public void verifMail(){
-    this.c2.getDomicile().getEmail().equals("edsger@dijstra.org");
+    assertEquals(adresse.getEmail(), this.c2.getDomicile().getEmail());
   }
 
   @Test
   public void verifUrl(){
-    this.c2.getDomicile().getUrl().equals("https://fr.wikipedia.org/wiki/Edsger_Dijkstra");
+    assertEquals(adresse.getUrl(), this.c2.getDomicile().getUrl());
   }
 
 
